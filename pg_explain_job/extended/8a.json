@@ -1,0 +1,1389 @@
+[
+  {
+    "Plan": {
+      "Node Type": "Aggregate",
+      "Strategy": "Plain",
+      "Partial Mode": "Simple",
+      "Parallel Aware": false,
+      "Async Capable": false,
+      "Startup Cost": 42438.18,
+      "Total Cost": 42438.19,
+      "Plan Rows": 1,
+      "Plan Width": 64,
+      "Actual Startup Time": 35053.991,
+      "Actual Total Time": 35054.522,
+      "Actual Rows": 1.0,
+      "Actual Loops": 1,
+      "Disabled": false,
+      "Output": [
+        "min(an1.name)",
+        "min(t.title)"
+      ],
+      "Shared Hit Blocks": 1250906,
+      "Shared Read Blocks": 710830,
+      "Shared Dirtied Blocks": 0,
+      "Shared Written Blocks": 0,
+      "Local Hit Blocks": 0,
+      "Local Read Blocks": 0,
+      "Local Dirtied Blocks": 0,
+      "Local Written Blocks": 0,
+      "Temp Read Blocks": 0,
+      "Temp Written Blocks": 0,
+      "Plans": [
+        {
+          "Node Type": "Nested Loop",
+          "Parent Relationship": "Outer",
+          "Parallel Aware": false,
+          "Async Capable": false,
+          "Join Type": "Inner",
+          "Startup Cost": 5822.74,
+          "Total Cost": 42438.18,
+          "Plan Rows": 1,
+          "Plan Width": 33,
+          "Actual Startup Time": 2387.636,
+          "Actual Total Time": 35054.423,
+          "Actual Rows": 62.0,
+          "Actual Loops": 1,
+          "Disabled": false,
+          "Output": [
+            "an1.name",
+            "t.title"
+          ],
+          "Inner Unique": true,
+          "Shared Hit Blocks": 1250906,
+          "Shared Read Blocks": 710830,
+          "Shared Dirtied Blocks": 0,
+          "Shared Written Blocks": 0,
+          "Local Hit Blocks": 0,
+          "Local Read Blocks": 0,
+          "Local Dirtied Blocks": 0,
+          "Local Written Blocks": 0,
+          "Temp Read Blocks": 0,
+          "Temp Written Blocks": 0,
+          "Plans": [
+            {
+              "Node Type": "Nested Loop",
+              "Parent Relationship": "Outer",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Join Type": "Inner",
+              "Startup Cost": 5822.31,
+              "Total Cost": 42437.41,
+              "Plan Rows": 1,
+              "Plan Width": 41,
+              "Actual Startup Time": 55.235,
+              "Actual Total Time": 34728.901,
+              "Actual Rows": 17379.0,
+              "Actual Loops": 1,
+              "Disabled": false,
+              "Output": [
+                "an1.name",
+                "an1.person_id",
+                "ci.person_id",
+                "t.title"
+              ],
+              "Inner Unique": false,
+              "Shared Hit Blocks": 1183762,
+              "Shared Read Blocks": 708458,
+              "Shared Dirtied Blocks": 0,
+              "Shared Written Blocks": 0,
+              "Local Hit Blocks": 0,
+              "Local Read Blocks": 0,
+              "Local Dirtied Blocks": 0,
+              "Local Written Blocks": 0,
+              "Temp Read Blocks": 0,
+              "Temp Written Blocks": 0,
+              "Plans": [
+                {
+                  "Node Type": "Gather",
+                  "Parent Relationship": "Outer",
+                  "Parallel Aware": false,
+                  "Async Capable": false,
+                  "Startup Cost": 5821.89,
+                  "Total Cost": 42436.41,
+                  "Plan Rows": 1,
+                  "Plan Width": 21,
+                  "Actual Startup Time": 54.613,
+                  "Actual Total Time": 34244.359,
+                  "Actual Rows": 7438.0,
+                  "Actual Loops": 1,
+                  "Disabled": false,
+                  "Output": [
+                    "ci.person_id",
+                    "t.title"
+                  ],
+                  "Workers Planned": 2,
+                  "Workers Launched": 2,
+                  "Single Copy": false,
+                  "Shared Hit Blocks": 1158527,
+                  "Shared Read Blocks": 704875,
+                  "Shared Dirtied Blocks": 0,
+                  "Shared Written Blocks": 0,
+                  "Local Hit Blocks": 0,
+                  "Local Read Blocks": 0,
+                  "Local Dirtied Blocks": 0,
+                  "Local Written Blocks": 0,
+                  "Temp Read Blocks": 0,
+                  "Temp Written Blocks": 0,
+                  "Plans": [
+                    {
+                      "Node Type": "Nested Loop",
+                      "Parent Relationship": "Outer",
+                      "Parallel Aware": false,
+                      "Async Capable": false,
+                      "Join Type": "Inner",
+                      "Startup Cost": 4821.89,
+                      "Total Cost": 41436.31,
+                      "Plan Rows": 1,
+                      "Plan Width": 21,
+                      "Actual Startup Time": 400.65,
+                      "Actual Total Time": 34674.96,
+                      "Actual Rows": 2479.33,
+                      "Actual Loops": 3,
+                      "Disabled": false,
+                      "Output": [
+                        "ci.person_id",
+                        "t.title"
+                      ],
+                      "Inner Unique": true,
+                      "Shared Hit Blocks": 1158527,
+                      "Shared Read Blocks": 704875,
+                      "Shared Dirtied Blocks": 0,
+                      "Shared Written Blocks": 0,
+                      "Local Hit Blocks": 0,
+                      "Local Read Blocks": 0,
+                      "Local Dirtied Blocks": 0,
+                      "Local Written Blocks": 0,
+                      "Temp Read Blocks": 0,
+                      "Temp Written Blocks": 0,
+                      "Workers": [
+                        {
+                          "Worker Number": 0,
+                          "Actual Startup Time": 648.918,
+                          "Actual Total Time": 34886.755,
+                          "Actual Rows": 1629.0,
+                          "Actual Loops": 1,
+                          "Shared Hit Blocks": 349321,
+                          "Shared Read Blocks": 233575,
+                          "Shared Dirtied Blocks": 0,
+                          "Shared Written Blocks": 0,
+                          "Local Hit Blocks": 0,
+                          "Local Read Blocks": 0,
+                          "Local Dirtied Blocks": 0,
+                          "Local Written Blocks": 0,
+                          "Temp Read Blocks": 0,
+                          "Temp Written Blocks": 0
+                        },
+                        {
+                          "Worker Number": 1,
+                          "Actual Startup Time": 498.585,
+                          "Actual Total Time": 35041.868,
+                          "Actual Rows": 3384.0,
+                          "Actual Loops": 1,
+                          "Shared Hit Blocks": 422538,
+                          "Shared Read Blocks": 235727,
+                          "Shared Dirtied Blocks": 0,
+                          "Shared Written Blocks": 0,
+                          "Local Hit Blocks": 0,
+                          "Local Read Blocks": 0,
+                          "Local Dirtied Blocks": 0,
+                          "Local Written Blocks": 0,
+                          "Temp Read Blocks": 0,
+                          "Temp Written Blocks": 0
+                        }
+                      ],
+                      "Plans": [
+                        {
+                          "Node Type": "Nested Loop",
+                          "Parent Relationship": "Outer",
+                          "Parallel Aware": false,
+                          "Async Capable": false,
+                          "Join Type": "Inner",
+                          "Startup Cost": 4821.73,
+                          "Total Cost": 41433.81,
+                          "Plan Rows": 22,
+                          "Plan Width": 25,
+                          "Actual Startup Time": 393.489,
+                          "Actual Total Time": 34671.392,
+                          "Actual Rows": 6533.33,
+                          "Actual Loops": 3,
+                          "Disabled": false,
+                          "Output": [
+                            "ci.person_id",
+                            "ci.role_id",
+                            "t.title"
+                          ],
+                          "Inner Unique": false,
+                          "Shared Hit Blocks": 1158515,
+                          "Shared Read Blocks": 704873,
+                          "Shared Dirtied Blocks": 0,
+                          "Shared Written Blocks": 0,
+                          "Local Hit Blocks": 0,
+                          "Local Read Blocks": 0,
+                          "Local Dirtied Blocks": 0,
+                          "Local Written Blocks": 0,
+                          "Temp Read Blocks": 0,
+                          "Temp Written Blocks": 0,
+                          "Workers": [
+                            {
+                              "Worker Number": 0,
+                              "Actual Startup Time": 633.621,
+                              "Actual Total Time": 34881.381,
+                              "Actual Rows": 4725.0,
+                              "Actual Loops": 1,
+                              "Shared Hit Blocks": 349316,
+                              "Shared Read Blocks": 233575,
+                              "Shared Dirtied Blocks": 0,
+                              "Shared Written Blocks": 0,
+                              "Local Hit Blocks": 0,
+                              "Local Read Blocks": 0,
+                              "Local Dirtied Blocks": 0,
+                              "Local Written Blocks": 0,
+                              "Temp Read Blocks": 0,
+                              "Temp Written Blocks": 0
+                            },
+                            {
+                              "Worker Number": 1,
+                              "Actual Startup Time": 492.574,
+                              "Actual Total Time": 35039.146,
+                              "Actual Rows": 8126.0,
+                              "Actual Loops": 1,
+                              "Shared Hit Blocks": 422533,
+                              "Shared Read Blocks": 235727,
+                              "Shared Dirtied Blocks": 0,
+                              "Shared Written Blocks": 0,
+                              "Local Hit Blocks": 0,
+                              "Local Read Blocks": 0,
+                              "Local Dirtied Blocks": 0,
+                              "Local Written Blocks": 0,
+                              "Temp Read Blocks": 0,
+                              "Temp Written Blocks": 0
+                            }
+                          ],
+                          "Plans": [
+                            {
+                              "Node Type": "Nested Loop",
+                              "Parent Relationship": "Outer",
+                              "Parallel Aware": false,
+                              "Async Capable": false,
+                              "Join Type": "Inner",
+                              "Startup Cost": 4821.29,
+                              "Total Cost": 41112.19,
+                              "Plan Rows": 193,
+                              "Plan Width": 25,
+                              "Actual Startup Time": 45.042,
+                              "Actual Total Time": 1963.342,
+                              "Actual Rows": 16109.33,
+                              "Actual Loops": 3,
+                              "Disabled": false,
+                              "Output": [
+                                "mc.movie_id",
+                                "t.title",
+                                "t.id"
+                              ],
+                              "Inner Unique": true,
+                              "Shared Hit Blocks": 162606,
+                              "Shared Read Blocks": 52572,
+                              "Shared Dirtied Blocks": 0,
+                              "Shared Written Blocks": 0,
+                              "Local Hit Blocks": 0,
+                              "Local Read Blocks": 0,
+                              "Local Dirtied Blocks": 0,
+                              "Local Written Blocks": 0,
+                              "Temp Read Blocks": 0,
+                              "Temp Written Blocks": 0,
+                              "Workers": [
+                                {
+                                  "Worker Number": 0,
+                                  "Actual Startup Time": 42.267,
+                                  "Actual Total Time": 1969.715,
+                                  "Actual Rows": 14107.0,
+                                  "Actual Loops": 1,
+                                  "Shared Hit Blocks": 46683,
+                                  "Shared Read Blocks": 14321,
+                                  "Shared Dirtied Blocks": 0,
+                                  "Shared Written Blocks": 0,
+                                  "Local Hit Blocks": 0,
+                                  "Local Read Blocks": 0,
+                                  "Local Dirtied Blocks": 0,
+                                  "Local Written Blocks": 0,
+                                  "Temp Read Blocks": 0,
+                                  "Temp Written Blocks": 0
+                                },
+                                {
+                                  "Worker Number": 1,
+                                  "Actual Startup Time": 41.813,
+                                  "Actual Total Time": 1895.282,
+                                  "Actual Rows": 17903.0,
+                                  "Actual Loops": 1,
+                                  "Shared Hit Blocks": 60811,
+                                  "Shared Read Blocks": 15358,
+                                  "Shared Dirtied Blocks": 0,
+                                  "Shared Written Blocks": 0,
+                                  "Local Hit Blocks": 0,
+                                  "Local Read Blocks": 0,
+                                  "Local Dirtied Blocks": 0,
+                                  "Local Written Blocks": 0,
+                                  "Temp Read Blocks": 0,
+                                  "Temp Written Blocks": 0
+                                }
+                              ],
+                              "Plans": [
+                                {
+                                  "Node Type": "Hash Join",
+                                  "Parent Relationship": "Outer",
+                                  "Parallel Aware": true,
+                                  "Async Capable": false,
+                                  "Join Type": "Inner",
+                                  "Startup Cost": 4820.86,
+                                  "Total Cost": 39968.47,
+                                  "Plan Rows": 193,
+                                  "Plan Width": 4,
+                                  "Actual Startup Time": 44.243,
+                                  "Actual Total Time": 144.176,
+                                  "Actual Rows": 16109.33,
+                                  "Actual Loops": 3,
+                                  "Disabled": false,
+                                  "Output": [
+                                    "mc.movie_id"
+                                  ],
+                                  "Inner Unique": true,
+                                  "Hash Cond": "(mc.company_id = cn.id)",
+                                  "Shared Hit Blocks": 0,
+                                  "Shared Read Blocks": 21864,
+                                  "Shared Dirtied Blocks": 0,
+                                  "Shared Written Blocks": 0,
+                                  "Local Hit Blocks": 0,
+                                  "Local Read Blocks": 0,
+                                  "Local Dirtied Blocks": 0,
+                                  "Local Written Blocks": 0,
+                                  "Temp Read Blocks": 0,
+                                  "Temp Written Blocks": 0,
+                                  "Workers": [
+                                    {
+                                      "Worker Number": 0,
+                                      "Actual Startup Time": 41.039,
+                                      "Actual Total Time": 118.031,
+                                      "Actual Rows": 14107.0,
+                                      "Actual Loops": 1,
+                                      "Shared Hit Blocks": 0,
+                                      "Shared Read Blocks": 4575,
+                                      "Shared Dirtied Blocks": 0,
+                                      "Shared Written Blocks": 0,
+                                      "Local Hit Blocks": 0,
+                                      "Local Read Blocks": 0,
+                                      "Local Dirtied Blocks": 0,
+                                      "Local Written Blocks": 0,
+                                      "Temp Read Blocks": 0,
+                                      "Temp Written Blocks": 0
+                                    },
+                                    {
+                                      "Worker Number": 1,
+                                      "Actual Startup Time": 41.005,
+                                      "Actual Total Time": 115.738,
+                                      "Actual Rows": 17903.0,
+                                      "Actual Loops": 1,
+                                      "Shared Hit Blocks": 0,
+                                      "Shared Read Blocks": 4556,
+                                      "Shared Dirtied Blocks": 0,
+                                      "Shared Written Blocks": 0,
+                                      "Local Hit Blocks": 0,
+                                      "Local Read Blocks": 0,
+                                      "Local Dirtied Blocks": 0,
+                                      "Local Written Blocks": 0,
+                                      "Temp Read Blocks": 0,
+                                      "Temp Written Blocks": 0
+                                    }
+                                  ],
+                                  "Plans": [
+                                    {
+                                      "Node Type": "Seq Scan",
+                                      "Parent Relationship": "Outer",
+                                      "Parallel Aware": true,
+                                      "Async Capable": false,
+                                      "Relation Name": "movie_companies",
+                                      "Schema": "public",
+                                      "Alias": "mc",
+                                      "Startup Cost": 0.0,
+                                      "Total Cost": 35131.06,
+                                      "Plan Rows": 6307,
+                                      "Plan Width": 8,
+                                      "Actual Startup Time": 0.937,
+                                      "Actual Total Time": 89.147,
+                                      "Actual Rows": 16299.0,
+                                      "Actual Loops": 3,
+                                      "Disabled": false,
+                                      "Output": [
+                                        "mc.id",
+                                        "mc.movie_id",
+                                        "mc.company_id",
+                                        "mc.company_type_id",
+                                        "mc.note"
+                                      ],
+                                      "Filter": "((mc.note ~~ '%(Japan)%'::text) AND (mc.note !~~ '%(USA)%'::text))",
+                                      "Rows Removed by Filter": 853411,
+                                      "Shared Hit Blocks": 0,
+                                      "Shared Read Blocks": 18824,
+                                      "Shared Dirtied Blocks": 0,
+                                      "Shared Written Blocks": 0,
+                                      "Local Hit Blocks": 0,
+                                      "Local Read Blocks": 0,
+                                      "Local Dirtied Blocks": 0,
+                                      "Local Written Blocks": 0,
+                                      "Temp Read Blocks": 0,
+                                      "Temp Written Blocks": 0,
+                                      "Workers": [
+                                        {
+                                          "Worker Number": 0,
+                                          "Actual Startup Time": 0.747,
+                                          "Actual Total Time": 65.888,
+                                          "Actual Rows": 14271.0,
+                                          "Actual Loops": 1,
+                                          "Shared Hit Blocks": 0,
+                                          "Shared Read Blocks": 3776,
+                                          "Shared Dirtied Blocks": 0,
+                                          "Shared Written Blocks": 0,
+                                          "Local Hit Blocks": 0,
+                                          "Local Read Blocks": 0,
+                                          "Local Dirtied Blocks": 0,
+                                          "Local Written Blocks": 0,
+                                          "Temp Read Blocks": 0,
+                                          "Temp Written Blocks": 0
+                                        },
+                                        {
+                                          "Worker Number": 1,
+                                          "Actual Startup Time": 0.745,
+                                          "Actual Total Time": 63.524,
+                                          "Actual Rows": 18105.0,
+                                          "Actual Loops": 1,
+                                          "Shared Hit Blocks": 0,
+                                          "Shared Read Blocks": 3744,
+                                          "Shared Dirtied Blocks": 0,
+                                          "Shared Written Blocks": 0,
+                                          "Local Hit Blocks": 0,
+                                          "Local Read Blocks": 0,
+                                          "Local Dirtied Blocks": 0,
+                                          "Local Written Blocks": 0,
+                                          "Temp Read Blocks": 0,
+                                          "Temp Written Blocks": 0
+                                        }
+                                      ],
+                                      "actual_scan_in_card": 2609129,
+                                      "actual_funnel_counts": [
+                                        2609129,
+                                        48897,
+                                        48897
+                                      ],
+                                      "component_selectivity": {
+                                        "expression_selectivity": 0.01874073685126339,
+                                        "expression_selectivity_2": 1.0
+                                      },
+                                      "ius": [
+                                        {
+                                          "name": "mc.id",
+                                          "bytes": 8
+                                        },
+                                        {
+                                          "name": "mc.movie_id",
+                                          "bytes": 8
+                                        },
+                                        {
+                                          "name": "mc.company_id",
+                                          "bytes": 8
+                                        },
+                                        {
+                                          "name": "mc.company_type_id",
+                                          "bytes": 8
+                                        },
+                                        {
+                                          "name": "mc.note",
+                                          "bytes": 8
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "Node Type": "Hash",
+                                      "Parent Relationship": "Inner",
+                                      "Parallel Aware": true,
+                                      "Async Capable": false,
+                                      "Startup Cost": 4767.92,
+                                      "Total Cost": 4767.92,
+                                      "Plan Rows": 4235,
+                                      "Plan Width": 4,
+                                      "Actual Startup Time": 43.217,
+                                      "Actual Total Time": 43.218,
+                                      "Actual Rows": 2250.67,
+                                      "Actual Loops": 3,
+                                      "Disabled": false,
+                                      "Output": [
+                                        "cn.id"
+                                      ],
+                                      "Hash Buckets": 8192,
+                                      "Original Hash Buckets": 8192,
+                                      "Hash Batches": 1,
+                                      "Original Hash Batches": 1,
+                                      "Peak Memory Usage": 416,
+                                      "Shared Hit Blocks": 0,
+                                      "Shared Read Blocks": 3040,
+                                      "Shared Dirtied Blocks": 0,
+                                      "Shared Written Blocks": 0,
+                                      "Local Hit Blocks": 0,
+                                      "Local Read Blocks": 0,
+                                      "Local Dirtied Blocks": 0,
+                                      "Local Written Blocks": 0,
+                                      "Temp Read Blocks": 0,
+                                      "Temp Written Blocks": 0,
+                                      "Workers": [
+                                        {
+                                          "Worker Number": 0,
+                                          "Actual Startup Time": 40.259,
+                                          "Actual Total Time": 40.26,
+                                          "Actual Rows": 1726.0,
+                                          "Actual Loops": 1,
+                                          "Shared Hit Blocks": 0,
+                                          "Shared Read Blocks": 799,
+                                          "Shared Dirtied Blocks": 0,
+                                          "Shared Written Blocks": 0,
+                                          "Local Hit Blocks": 0,
+                                          "Local Read Blocks": 0,
+                                          "Local Dirtied Blocks": 0,
+                                          "Local Written Blocks": 0,
+                                          "Temp Read Blocks": 0,
+                                          "Temp Written Blocks": 0
+                                        },
+                                        {
+                                          "Worker Number": 1,
+                                          "Actual Startup Time": 40.211,
+                                          "Actual Total Time": 40.211,
+                                          "Actual Rows": 1702.0,
+                                          "Actual Loops": 1,
+                                          "Shared Hit Blocks": 0,
+                                          "Shared Read Blocks": 812,
+                                          "Shared Dirtied Blocks": 0,
+                                          "Shared Written Blocks": 0,
+                                          "Local Hit Blocks": 0,
+                                          "Local Read Blocks": 0,
+                                          "Local Dirtied Blocks": 0,
+                                          "Local Written Blocks": 0,
+                                          "Temp Read Blocks": 0,
+                                          "Temp Written Blocks": 0
+                                        }
+                                      ],
+                                      "Plans": [
+                                        {
+                                          "Node Type": "Seq Scan",
+                                          "Parent Relationship": "Outer",
+                                          "Parallel Aware": true,
+                                          "Async Capable": false,
+                                          "Relation Name": "company_name",
+                                          "Schema": "public",
+                                          "Alias": "cn",
+                                          "Startup Cost": 0.0,
+                                          "Total Cost": 4767.92,
+                                          "Plan Rows": 4235,
+                                          "Plan Width": 4,
+                                          "Actual Startup Time": 1.698,
+                                          "Actual Total Time": 42.464,
+                                          "Actual Rows": 2250.67,
+                                          "Actual Loops": 3,
+                                          "Disabled": false,
+                                          "Output": [
+                                            "cn.id"
+                                          ],
+                                          "Filter": "((cn.country_code)::text = '[jp]'::text)",
+                                          "Rows Removed by Filter": 76082,
+                                          "Shared Hit Blocks": 0,
+                                          "Shared Read Blocks": 3040,
+                                          "Shared Dirtied Blocks": 0,
+                                          "Shared Written Blocks": 0,
+                                          "Local Hit Blocks": 0,
+                                          "Local Read Blocks": 0,
+                                          "Local Dirtied Blocks": 0,
+                                          "Local Written Blocks": 0,
+                                          "Temp Read Blocks": 0,
+                                          "Temp Written Blocks": 0,
+                                          "Workers": [
+                                            {
+                                              "Worker Number": 0,
+                                              "Actual Startup Time": 2.312,
+                                              "Actual Total Time": 39.433,
+                                              "Actual Rows": 1726.0,
+                                              "Actual Loops": 1,
+                                              "Shared Hit Blocks": 0,
+                                              "Shared Read Blocks": 799,
+                                              "Shared Dirtied Blocks": 0,
+                                              "Shared Written Blocks": 0,
+                                              "Local Hit Blocks": 0,
+                                              "Local Read Blocks": 0,
+                                              "Local Dirtied Blocks": 0,
+                                              "Local Written Blocks": 0,
+                                              "Temp Read Blocks": 0,
+                                              "Temp Written Blocks": 0
+                                            },
+                                            {
+                                              "Worker Number": 1,
+                                              "Actual Startup Time": 2.291,
+                                              "Actual Total Time": 39.744,
+                                              "Actual Rows": 1702.0,
+                                              "Actual Loops": 1,
+                                              "Shared Hit Blocks": 0,
+                                              "Shared Read Blocks": 812,
+                                              "Shared Dirtied Blocks": 0,
+                                              "Shared Written Blocks": 0,
+                                              "Local Hit Blocks": 0,
+                                              "Local Read Blocks": 0,
+                                              "Local Dirtied Blocks": 0,
+                                              "Local Written Blocks": 0,
+                                              "Temp Read Blocks": 0,
+                                              "Temp Written Blocks": 0
+                                            }
+                                          ],
+                                          "actual_scan_in_card": 234997,
+                                          "actual_funnel_counts": [
+                                            234997,
+                                            6752
+                                          ],
+                                          "component_selectivity": {
+                                            "compare_selectivity": 0.02873228168870241
+                                          },
+                                          "ius": [
+                                            {
+                                              "name": "cn.id",
+                                              "bytes": 8
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "ius": [
+                                        {
+                                          "name": "cn.id",
+                                          "bytes": 8
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "ius": [
+                                    {
+                                      "name": "mc.movie_id",
+                                      "bytes": 8
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Node Type": "Index Scan",
+                                  "Parent Relationship": "Inner",
+                                  "Parallel Aware": false,
+                                  "Async Capable": false,
+                                  "Scan Direction": "Forward",
+                                  "Index Name": "title_pkey",
+                                  "Relation Name": "title",
+                                  "Schema": "public",
+                                  "Alias": "t",
+                                  "Startup Cost": 0.43,
+                                  "Total Cost": 5.93,
+                                  "Plan Rows": 1,
+                                  "Plan Width": 21,
+                                  "Actual Startup Time": 0.112,
+                                  "Actual Total Time": 0.112,
+                                  "Actual Rows": 1.0,
+                                  "Actual Loops": 48328,
+                                  "Disabled": false,
+                                  "Output": [
+                                    "t.id",
+                                    "t.title",
+                                    "t.imdb_index",
+                                    "t.kind_id",
+                                    "t.production_year",
+                                    "t.imdb_id",
+                                    "t.phonetic_code",
+                                    "t.episode_of_id",
+                                    "t.season_nr",
+                                    "t.episode_nr",
+                                    "t.series_years",
+                                    "t.md5sum"
+                                  ],
+                                  "Index Cond": "(t.id = mc.movie_id)",
+                                  "Rows Removed by Index Recheck": 0,
+                                  "Index Searches": 48328,
+                                  "Shared Hit Blocks": 162606,
+                                  "Shared Read Blocks": 30708,
+                                  "Shared Dirtied Blocks": 0,
+                                  "Shared Written Blocks": 0,
+                                  "Local Hit Blocks": 0,
+                                  "Local Read Blocks": 0,
+                                  "Local Dirtied Blocks": 0,
+                                  "Local Written Blocks": 0,
+                                  "Temp Read Blocks": 0,
+                                  "Temp Written Blocks": 0,
+                                  "Workers": [
+                                    {
+                                      "Worker Number": 0,
+                                      "Actual Startup Time": 0.131,
+                                      "Actual Total Time": 0.131,
+                                      "Actual Rows": 1.0,
+                                      "Actual Loops": 14107,
+                                      "Shared Hit Blocks": 46683,
+                                      "Shared Read Blocks": 9746,
+                                      "Shared Dirtied Blocks": 0,
+                                      "Shared Written Blocks": 0,
+                                      "Local Hit Blocks": 0,
+                                      "Local Read Blocks": 0,
+                                      "Local Dirtied Blocks": 0,
+                                      "Local Written Blocks": 0,
+                                      "Temp Read Blocks": 0,
+                                      "Temp Written Blocks": 0
+                                    },
+                                    {
+                                      "Worker Number": 1,
+                                      "Actual Startup Time": 0.099,
+                                      "Actual Total Time": 0.099,
+                                      "Actual Rows": 1.0,
+                                      "Actual Loops": 17903,
+                                      "Shared Hit Blocks": 60811,
+                                      "Shared Read Blocks": 10802,
+                                      "Shared Dirtied Blocks": 0,
+                                      "Shared Written Blocks": 0,
+                                      "Local Hit Blocks": 0,
+                                      "Local Read Blocks": 0,
+                                      "Local Dirtied Blocks": 0,
+                                      "Local Written Blocks": 0,
+                                      "Temp Read Blocks": 0,
+                                      "Temp Written Blocks": 0
+                                    }
+                                  ],
+                                  "actual_scan_in_card": 2528312,
+                                  "ius": [
+                                    {
+                                      "name": "t.id",
+                                      "bytes": 8
+                                    },
+                                    {
+                                      "name": "t.title",
+                                      "bytes": 8
+                                    },
+                                    {
+                                      "name": "t.imdb_index",
+                                      "bytes": 8
+                                    },
+                                    {
+                                      "name": "t.kind_id",
+                                      "bytes": 8
+                                    },
+                                    {
+                                      "name": "t.production_year",
+                                      "bytes": 8
+                                    },
+                                    {
+                                      "name": "t.imdb_id",
+                                      "bytes": 8
+                                    },
+                                    {
+                                      "name": "t.phonetic_code",
+                                      "bytes": 8
+                                    },
+                                    {
+                                      "name": "t.episode_of_id",
+                                      "bytes": 8
+                                    },
+                                    {
+                                      "name": "t.season_nr",
+                                      "bytes": 8
+                                    },
+                                    {
+                                      "name": "t.episode_nr",
+                                      "bytes": 8
+                                    },
+                                    {
+                                      "name": "t.series_years",
+                                      "bytes": 8
+                                    },
+                                    {
+                                      "name": "t.md5sum",
+                                      "bytes": 8
+                                    }
+                                  ]
+                                }
+                              ],
+                              "ius": [
+                                {
+                                  "name": "mc.movie_id",
+                                  "bytes": 8
+                                },
+                                {
+                                  "name": "t.title",
+                                  "bytes": 8
+                                },
+                                {
+                                  "name": "t.id",
+                                  "bytes": 8
+                                }
+                              ]
+                            },
+                            {
+                              "Node Type": "Index Scan",
+                              "Parent Relationship": "Inner",
+                              "Parallel Aware": false,
+                              "Async Capable": false,
+                              "Scan Direction": "Forward",
+                              "Index Name": "movie_id_cast_info",
+                              "Relation Name": "cast_info",
+                              "Schema": "public",
+                              "Alias": "ci",
+                              "Startup Cost": 0.44,
+                              "Total Cost": 1.66,
+                              "Plan Rows": 1,
+                              "Plan Width": 12,
+                              "Actual Startup Time": 1.967,
+                              "Actual Total Time": 2.03,
+                              "Actual Rows": 0.41,
+                              "Actual Loops": 48328,
+                              "Disabled": false,
+                              "Output": [
+                                "ci.id",
+                                "ci.person_id",
+                                "ci.movie_id",
+                                "ci.person_role_id",
+                                "ci.note",
+                                "ci.nr_order",
+                                "ci.role_id"
+                              ],
+                              "Index Cond": "(ci.movie_id = t.id)",
+                              "Rows Removed by Index Recheck": 0,
+                              "Filter": "(ci.note = '(voice: English version)'::text)",
+                              "Rows Removed by Filter": 32,
+                              "Index Searches": 48328,
+                              "Shared Hit Blocks": 995909,
+                              "Shared Read Blocks": 652301,
+                              "Shared Dirtied Blocks": 0,
+                              "Shared Written Blocks": 0,
+                              "Local Hit Blocks": 0,
+                              "Local Read Blocks": 0,
+                              "Local Dirtied Blocks": 0,
+                              "Local Written Blocks": 0,
+                              "Temp Read Blocks": 0,
+                              "Temp Written Blocks": 0,
+                              "Workers": [
+                                {
+                                  "Worker Number": 0,
+                                  "Actual Startup Time": 2.251,
+                                  "Actual Total Time": 2.333,
+                                  "Actual Rows": 0.33,
+                                  "Actual Loops": 14107,
+                                  "Shared Hit Blocks": 302633,
+                                  "Shared Read Blocks": 219254,
+                                  "Shared Dirtied Blocks": 0,
+                                  "Shared Written Blocks": 0,
+                                  "Local Hit Blocks": 0,
+                                  "Local Read Blocks": 0,
+                                  "Local Dirtied Blocks": 0,
+                                  "Local Written Blocks": 0,
+                                  "Temp Read Blocks": 0,
+                                  "Temp Written Blocks": 0
+                                },
+                                {
+                                  "Worker Number": 1,
+                                  "Actual Startup Time": 1.78,
+                                  "Actual Total Time": 1.851,
+                                  "Actual Rows": 0.45,
+                                  "Actual Loops": 17903,
+                                  "Shared Hit Blocks": 361722,
+                                  "Shared Read Blocks": 220369,
+                                  "Shared Dirtied Blocks": 0,
+                                  "Shared Written Blocks": 0,
+                                  "Local Hit Blocks": 0,
+                                  "Local Read Blocks": 0,
+                                  "Local Dirtied Blocks": 0,
+                                  "Local Written Blocks": 0,
+                                  "Temp Read Blocks": 0,
+                                  "Temp Written Blocks": 0
+                                }
+                              ],
+                              "actual_scan_in_card": 36244344,
+                              "actual_funnel_counts": [
+                                36244344,
+                                93095
+                              ],
+                              "component_selectivity": {
+                                "compare_selectivity": 0.0025685386939269753
+                              },
+                              "ius": [
+                                {
+                                  "name": "ci.id",
+                                  "bytes": 8
+                                },
+                                {
+                                  "name": "ci.person_id",
+                                  "bytes": 8
+                                },
+                                {
+                                  "name": "ci.movie_id",
+                                  "bytes": 8
+                                },
+                                {
+                                  "name": "ci.person_role_id",
+                                  "bytes": 8
+                                },
+                                {
+                                  "name": "ci.note",
+                                  "bytes": 8
+                                },
+                                {
+                                  "name": "ci.nr_order",
+                                  "bytes": 8
+                                },
+                                {
+                                  "name": "ci.role_id",
+                                  "bytes": 8
+                                }
+                              ]
+                            }
+                          ],
+                          "ius": [
+                            {
+                              "name": "ci.person_id",
+                              "bytes": 8
+                            },
+                            {
+                              "name": "ci.role_id",
+                              "bytes": 8
+                            },
+                            {
+                              "name": "t.title",
+                              "bytes": 8
+                            }
+                          ]
+                        },
+                        {
+                          "Node Type": "Memoize",
+                          "Parent Relationship": "Inner",
+                          "Parallel Aware": false,
+                          "Async Capable": false,
+                          "Startup Cost": 0.16,
+                          "Total Cost": 0.18,
+                          "Plan Rows": 1,
+                          "Plan Width": 4,
+                          "Actual Startup Time": 0.0,
+                          "Actual Total Time": 0.0,
+                          "Actual Rows": 0.38,
+                          "Actual Loops": 19600,
+                          "Disabled": false,
+                          "Output": [
+                            "rt.id"
+                          ],
+                          "Cache Key": "ci.role_id",
+                          "Cache Mode": "logical",
+                          "Cache Hits": 6747,
+                          "Cache Misses": 2,
+                          "Cache Evictions": 0,
+                          "Cache Overflows": 0,
+                          "Peak Memory Usage": 1,
+                          "Shared Hit Blocks": 12,
+                          "Shared Read Blocks": 2,
+                          "Shared Dirtied Blocks": 0,
+                          "Shared Written Blocks": 0,
+                          "Local Hit Blocks": 0,
+                          "Local Read Blocks": 0,
+                          "Local Dirtied Blocks": 0,
+                          "Local Written Blocks": 0,
+                          "Temp Read Blocks": 0,
+                          "Temp Written Blocks": 0,
+                          "Workers": [
+                            {
+                              "Worker Number": 0,
+                              "Actual Startup Time": 0.001,
+                              "Actual Total Time": 0.001,
+                              "Actual Rows": 0.34,
+                              "Actual Loops": 4725,
+                              "Cache Hits": 4723,
+                              "Cache Misses": 2,
+                              "Cache Evictions": 0,
+                              "Cache Overflows": 0,
+                              "Peak Memory Usage": 1,
+                              "Shared Hit Blocks": 5,
+                              "Shared Read Blocks": 0,
+                              "Shared Dirtied Blocks": 0,
+                              "Shared Written Blocks": 0,
+                              "Local Hit Blocks": 0,
+                              "Local Read Blocks": 0,
+                              "Local Dirtied Blocks": 0,
+                              "Local Written Blocks": 0,
+                              "Temp Read Blocks": 0,
+                              "Temp Written Blocks": 0
+                            },
+                            {
+                              "Worker Number": 1,
+                              "Actual Startup Time": 0.0,
+                              "Actual Total Time": 0.0,
+                              "Actual Rows": 0.42,
+                              "Actual Loops": 8126,
+                              "Cache Hits": 8124,
+                              "Cache Misses": 2,
+                              "Cache Evictions": 0,
+                              "Cache Overflows": 0,
+                              "Peak Memory Usage": 1,
+                              "Shared Hit Blocks": 5,
+                              "Shared Read Blocks": 0,
+                              "Shared Dirtied Blocks": 0,
+                              "Shared Written Blocks": 0,
+                              "Local Hit Blocks": 0,
+                              "Local Read Blocks": 0,
+                              "Local Dirtied Blocks": 0,
+                              "Local Written Blocks": 0,
+                              "Temp Read Blocks": 0,
+                              "Temp Written Blocks": 0
+                            }
+                          ],
+                          "Plans": [
+                            {
+                              "Node Type": "Index Scan",
+                              "Parent Relationship": "Outer",
+                              "Parallel Aware": false,
+                              "Async Capable": false,
+                              "Scan Direction": "Forward",
+                              "Index Name": "role_type_pkey",
+                              "Relation Name": "role_type",
+                              "Schema": "public",
+                              "Alias": "rt",
+                              "Startup Cost": 0.15,
+                              "Total Cost": 0.17,
+                              "Plan Rows": 1,
+                              "Plan Width": 4,
+                              "Actual Startup Time": 0.039,
+                              "Actual Total Time": 0.039,
+                              "Actual Rows": 0.5,
+                              "Actual Loops": 6,
+                              "Disabled": false,
+                              "Output": [
+                                "rt.id"
+                              ],
+                              "Index Cond": "(rt.id = ci.role_id)",
+                              "Rows Removed by Index Recheck": 0,
+                              "Filter": "((rt.role)::text = 'actress'::text)",
+                              "Rows Removed by Filter": 0,
+                              "Index Searches": 6,
+                              "Shared Hit Blocks": 12,
+                              "Shared Read Blocks": 2,
+                              "Shared Dirtied Blocks": 0,
+                              "Shared Written Blocks": 0,
+                              "Local Hit Blocks": 0,
+                              "Local Read Blocks": 0,
+                              "Local Dirtied Blocks": 0,
+                              "Local Written Blocks": 0,
+                              "Temp Read Blocks": 0,
+                              "Temp Written Blocks": 0,
+                              "Workers": [
+                                {
+                                  "Worker Number": 0,
+                                  "Actual Startup Time": 0.016,
+                                  "Actual Total Time": 0.016,
+                                  "Actual Rows": 0.5,
+                                  "Actual Loops": 2,
+                                  "Shared Hit Blocks": 5,
+                                  "Shared Read Blocks": 0,
+                                  "Shared Dirtied Blocks": 0,
+                                  "Shared Written Blocks": 0,
+                                  "Local Hit Blocks": 0,
+                                  "Local Read Blocks": 0,
+                                  "Local Dirtied Blocks": 0,
+                                  "Local Written Blocks": 0,
+                                  "Temp Read Blocks": 0,
+                                  "Temp Written Blocks": 0
+                                },
+                                {
+                                  "Worker Number": 1,
+                                  "Actual Startup Time": 0.015,
+                                  "Actual Total Time": 0.015,
+                                  "Actual Rows": 0.5,
+                                  "Actual Loops": 2,
+                                  "Shared Hit Blocks": 5,
+                                  "Shared Read Blocks": 0,
+                                  "Shared Dirtied Blocks": 0,
+                                  "Shared Written Blocks": 0,
+                                  "Local Hit Blocks": 0,
+                                  "Local Read Blocks": 0,
+                                  "Local Dirtied Blocks": 0,
+                                  "Local Written Blocks": 0,
+                                  "Temp Read Blocks": 0,
+                                  "Temp Written Blocks": 0
+                                }
+                              ],
+                              "actual_scan_in_card": 12,
+                              "actual_funnel_counts": [
+                                12,
+                                1
+                              ],
+                              "component_selectivity": {
+                                "compare_selectivity": 0.08333333333333333
+                              },
+                              "ius": [
+                                {
+                                  "name": "rt.id",
+                                  "bytes": 8
+                                }
+                              ]
+                            }
+                          ],
+                          "ius": [
+                            {
+                              "name": "rt.id",
+                              "bytes": 8
+                            }
+                          ]
+                        }
+                      ],
+                      "ius": [
+                        {
+                          "name": "ci.person_id",
+                          "bytes": 10
+                        },
+                        {
+                          "name": "t.title",
+                          "bytes": 10
+                        }
+                      ]
+                    }
+                  ],
+                  "ius": [
+                    {
+                      "name": "ci.person_id",
+                      "bytes": 10
+                    },
+                    {
+                      "name": "t.title",
+                      "bytes": 10
+                    }
+                  ]
+                },
+                {
+                  "Node Type": "Index Scan",
+                  "Parent Relationship": "Inner",
+                  "Parallel Aware": false,
+                  "Async Capable": false,
+                  "Scan Direction": "Forward",
+                  "Index Name": "person_id_aka_name",
+                  "Relation Name": "aka_name",
+                  "Schema": "public",
+                  "Alias": "an1",
+                  "Startup Cost": 0.42,
+                  "Total Cost": 0.98,
+                  "Plan Rows": 2,
+                  "Plan Width": 20,
+                  "Actual Startup Time": 0.062,
+                  "Actual Total Time": 0.064,
+                  "Actual Rows": 2.34,
+                  "Actual Loops": 7438,
+                  "Disabled": false,
+                  "Output": [
+                    "an1.id",
+                    "an1.person_id",
+                    "an1.name",
+                    "an1.imdb_index",
+                    "an1.name_pcode_cf",
+                    "an1.name_pcode_nf",
+                    "an1.surname_pcode",
+                    "an1.md5sum"
+                  ],
+                  "Index Cond": "(an1.person_id = ci.person_id)",
+                  "Rows Removed by Index Recheck": 0,
+                  "Index Searches": 7438,
+                  "Shared Hit Blocks": 25235,
+                  "Shared Read Blocks": 3583,
+                  "Shared Dirtied Blocks": 0,
+                  "Shared Written Blocks": 0,
+                  "Local Hit Blocks": 0,
+                  "Local Read Blocks": 0,
+                  "Local Dirtied Blocks": 0,
+                  "Local Written Blocks": 0,
+                  "Temp Read Blocks": 0,
+                  "Temp Written Blocks": 0,
+                  "actual_scan_in_card": 901343,
+                  "ius": [
+                    {
+                      "name": "an1.id",
+                      "bytes": 8
+                    },
+                    {
+                      "name": "an1.person_id",
+                      "bytes": 8
+                    },
+                    {
+                      "name": "an1.name",
+                      "bytes": 8
+                    },
+                    {
+                      "name": "an1.imdb_index",
+                      "bytes": 8
+                    },
+                    {
+                      "name": "an1.name_pcode_cf",
+                      "bytes": 8
+                    },
+                    {
+                      "name": "an1.name_pcode_nf",
+                      "bytes": 8
+                    },
+                    {
+                      "name": "an1.surname_pcode",
+                      "bytes": 8
+                    },
+                    {
+                      "name": "an1.md5sum",
+                      "bytes": 8
+                    }
+                  ]
+                }
+              ],
+              "ius": [
+                {
+                  "name": "an1.name",
+                  "bytes": 10
+                },
+                {
+                  "name": "an1.person_id",
+                  "bytes": 10
+                },
+                {
+                  "name": "ci.person_id",
+                  "bytes": 10
+                },
+                {
+                  "name": "t.title",
+                  "bytes": 10
+                }
+              ]
+            },
+            {
+              "Node Type": "Index Scan",
+              "Parent Relationship": "Inner",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Scan Direction": "Forward",
+              "Index Name": "name_pkey",
+              "Relation Name": "name",
+              "Schema": "public",
+              "Alias": "n1",
+              "Startup Cost": 0.43,
+              "Total Cost": 0.77,
+              "Plan Rows": 1,
+              "Plan Width": 4,
+              "Actual Startup Time": 0.019,
+              "Actual Total Time": 0.019,
+              "Actual Rows": 0.0,
+              "Actual Loops": 17379,
+              "Disabled": false,
+              "Output": [
+                "n1.id",
+                "n1.name",
+                "n1.imdb_index",
+                "n1.imdb_id",
+                "n1.gender",
+                "n1.name_pcode_cf",
+                "n1.name_pcode_nf",
+                "n1.surname_pcode",
+                "n1.md5sum"
+              ],
+              "Index Cond": "(n1.id = an1.person_id)",
+              "Rows Removed by Index Recheck": 0,
+              "Filter": "((n1.name ~~ '%Yo%'::text) AND (n1.name !~~ '%Yu%'::text))",
+              "Rows Removed by Filter": 1,
+              "Index Searches": 17379,
+              "Shared Hit Blocks": 67144,
+              "Shared Read Blocks": 2372,
+              "Shared Dirtied Blocks": 0,
+              "Shared Written Blocks": 0,
+              "Local Hit Blocks": 0,
+              "Local Read Blocks": 0,
+              "Local Dirtied Blocks": 0,
+              "Local Written Blocks": 0,
+              "Temp Read Blocks": 0,
+              "Temp Written Blocks": 0,
+              "actual_scan_in_card": 4167491,
+              "actual_funnel_counts": [
+                4167491,
+                21066,
+                20911
+              ],
+              "component_selectivity": {
+                "expression_selectivity": 0.0050548399504642,
+                "expression_selectivity_2": 0.9926421722206399
+              },
+              "ius": [
+                {
+                  "name": "n1.id",
+                  "bytes": 8
+                },
+                {
+                  "name": "n1.name",
+                  "bytes": 8
+                },
+                {
+                  "name": "n1.imdb_index",
+                  "bytes": 8
+                },
+                {
+                  "name": "n1.imdb_id",
+                  "bytes": 8
+                },
+                {
+                  "name": "n1.gender",
+                  "bytes": 8
+                },
+                {
+                  "name": "n1.name_pcode_cf",
+                  "bytes": 8
+                },
+                {
+                  "name": "n1.name_pcode_nf",
+                  "bytes": 8
+                },
+                {
+                  "name": "n1.surname_pcode",
+                  "bytes": 8
+                },
+                {
+                  "name": "n1.md5sum",
+                  "bytes": 8
+                }
+              ]
+            }
+          ],
+          "ius": [
+            {
+              "name": "an1.name",
+              "bytes": 16
+            },
+            {
+              "name": "t.title",
+              "bytes": 16
+            }
+          ]
+        }
+      ],
+      "ius": [
+        {
+          "name": "min(an1.name)",
+          "bytes": 32
+        },
+        {
+          "name": "min(t.title)",
+          "bytes": 32
+        }
+      ]
+    },
+    "Planning": {
+      "Shared Hit Blocks": 82,
+      "Shared Read Blocks": 50,
+      "Shared Dirtied Blocks": 0,
+      "Shared Written Blocks": 0,
+      "Local Hit Blocks": 0,
+      "Local Read Blocks": 0,
+      "Local Dirtied Blocks": 0,
+      "Local Written Blocks": 0,
+      "Temp Read Blocks": 0,
+      "Temp Written Blocks": 0
+    },
+    "Planning Time": 79.148,
+    "Triggers": [],
+    "Execution Time": 35054.676
+  }
+]
